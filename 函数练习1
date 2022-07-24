@@ -1,0 +1,31 @@
+int prime(int i)
+{
+	int j = 0;
+	for (j = 2; j < i; j++)
+	{
+		if (i % j == 0)
+		{
+			return 0;
+		}
+	}
+	return 1;
+}
+
+
+int main()
+{
+	int n = 0;
+	int count = 0;
+
+	for (n = 100; n <= 200; n++)
+	{
+		if (prime(n) == 1)
+		{
+			count++;
+			printf("%d ", n);
+		}
+	}
+	printf("\n素数个数有：%d", count);
+
+	return 0;
+}
